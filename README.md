@@ -16,8 +16,8 @@
 
 ```bash
 cd /volume1/docker
-git clone https://github.com/your-repository/kasm-ubuntu.git
-cd kasm-ubuntu
+git clone https://github.com/jingmian/nas-docker-ubuntu.git
+cd nas-docker-ubuntu
 ```
 
 ### 2. 设置权限
@@ -36,7 +36,7 @@ chmod 777 data
 
 1. 打开群晖 DSM，进入 "Container Manager"
 2. 点击左侧 "容器" -> 点击右上角 "添加" -> 选择 "从文件夹导入"
-3. 选择路径：`/volume1/docker/kasm-ubuntu`
+3. 选择路径：`/volume1/docker/nas-docker-ubuntu`
 4. 系统会自动识别 docker-compose.yml 文件
 5. 点击 "下一步"，确认配置信息
 6. 点击 "应用" 开始构建和启动容器
@@ -46,7 +46,7 @@ chmod 777 data
 如果您更习惯使用命令行，可以通过 SSH 连接到群晖后执行以下命令：
 
 ```bash
-cd /volume1/docker/kasm-ubuntu
+cd /volume1/docker/nas-docker-ubuntu
 docker-compose up -d
 ```
 
