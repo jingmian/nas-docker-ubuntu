@@ -1,0 +1,18 @@
+version: '3'
+services:
+  kasm-ksweb:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ksweb
+    privileged: true
+    ports:
+      - "12902:6901"  # VNC Web界面端口
+    environment:
+      - TZ=Asia/Shanghai
+      - VNC_PW=123456  # 设置VNC访问密码
+    volumes:
+      - ./data:/home/kasm-user/:rw  # 挂载主机目录到容器
+#   shm_size: 2048m  # 设置共享内存大小
+
+ 
